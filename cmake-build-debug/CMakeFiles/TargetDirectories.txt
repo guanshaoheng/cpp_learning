@@ -1,0 +1,10 @@
+/home/tongming/c_test/cmake-build-debug/CMakeFiles/test.dir
+/home/tongming/c_test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tongming/c_test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tongming/c_test/cmake-build-debug/read_exmaple/CMakeFiles/reader.dir
+/home/tongming/c_test/cmake-build-debug/read_exmaple/CMakeFiles/edit_cache.dir
+/home/tongming/c_test/cmake-build-debug/read_exmaple/CMakeFiles/rebuild_cache.dir
+/home/tongming/c_test/cmake-build-debug/src/CMakeFiles/func_lib.dir
+/home/tongming/c_test/cmake-build-debug/src/CMakeFiles/boost_c.dir
+/home/tongming/c_test/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/tongming/c_test/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir

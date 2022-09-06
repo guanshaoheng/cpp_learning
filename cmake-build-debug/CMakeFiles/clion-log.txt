@@ -1,0 +1,4 @@
+/home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/ninja/linux/ninja -G Ninja -S /home/tongming/c_test -B /home/tongming/c_test/cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/tongming/c_test/cmake-build-debug
