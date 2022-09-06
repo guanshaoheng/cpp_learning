@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/tongming/c_test/cmake-build-debug/
+cmake_ninja_workdir = /home/tongming/cpp_learning/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target test
 
@@ -49,11 +49,11 @@ cmake_ninja_workdir = /home/tongming/c_test/cmake-build-debug/
 
 build cmake_object_order_depends_target_test: phony || cmake_object_order_depends_target_boost_c cmake_object_order_depends_target_func_lib
 
-build CMakeFiles/test.dir/main.cpp.o: CXX_COMPILER__test_debug /home/tongming/c_test/main.cpp || cmake_object_order_depends_target_test
+build CMakeFiles/test.dir/main.cpp.o: CXX_COMPILER__test_debug /home/tongming/cpp_learning/main.cpp || cmake_object_order_depends_target_test
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK
   DEP_FILE = CMakeFiles/test.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/tongming/c_test/include -I/usr/include/python3.10
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10
   OBJECT_DIR = CMakeFiles/test.dir
   OBJECT_FILE_DIR = CMakeFiles/test.dir
 
@@ -75,12 +75,153 @@ build test: CXX_EXECUTABLE_LINKER__test_debug CMakeFiles/test.dir/main.cpp.o | /
   TARGET_FILE = test
   TARGET_PDB = test.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target reader
+
+
+#############################################
+# Order-only phony target for reader
+
+build cmake_object_order_depends_target_reader: phony || CMakeFiles/reader.dir
+
+build CMakeFiles/reader.dir/reader.cpp.o: CXX_COMPILER__reader_debug /home/tongming/cpp_learning/reader.cpp || cmake_object_order_depends_target_reader
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK
+  DEP_FILE = CMakeFiles/reader.dir/reader.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10
+  OBJECT_DIR = CMakeFiles/reader.dir
+  OBJECT_FILE_DIR = CMakeFiles/reader.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target reader
+
+
+#############################################
+# Link the executable reader
+
+build reader: CXX_EXECUTABLE_LINKER__reader_debug CMakeFiles/reader.dir/reader.cpp.o | /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0 /usr/lib/x86_64-linux-gnu/libpython3.10.so
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0  -lpython3.10
+  OBJECT_DIR = CMakeFiles/reader.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = reader
+  TARGET_PDB = reader.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target thread
+
+
+#############################################
+# Order-only phony target for thread
+
+build cmake_object_order_depends_target_thread: phony || CMakeFiles/thread.dir
+
+build CMakeFiles/thread.dir/thread.cpp.o: CXX_COMPILER__thread_debug /home/tongming/cpp_learning/thread.cpp || cmake_object_order_depends_target_thread
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK
+  DEP_FILE = CMakeFiles/thread.dir/thread.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10
+  OBJECT_DIR = CMakeFiles/thread.dir
+  OBJECT_FILE_DIR = CMakeFiles/thread.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target thread
+
+
+#############################################
+# Link the executable thread
+
+build thread: CXX_EXECUTABLE_LINKER__thread_debug CMakeFiles/thread.dir/thread.cpp.o | /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0 /usr/lib/x86_64-linux-gnu/libpython3.10.so
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0  -lpython3.10
+  OBJECT_DIR = CMakeFiles/thread.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = thread
+  TARGET_PDB = thread.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target eigen_test
+
+
+#############################################
+# Order-only phony target for eigen_test
+
+build cmake_object_order_depends_target_eigen_test: phony || CMakeFiles/eigen_test.dir
+
+build CMakeFiles/eigen_test.dir/eigen_test.cpp.o: CXX_COMPILER__eigen_test_debug /home/tongming/cpp_learning/eigen_test.cpp || cmake_object_order_depends_target_eigen_test
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK
+  DEP_FILE = CMakeFiles/eigen_test.dir/eigen_test.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -isystem /usr/include/eigen3
+  OBJECT_DIR = CMakeFiles/eigen_test.dir
+  OBJECT_FILE_DIR = CMakeFiles/eigen_test.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target eigen_test
+
+
+#############################################
+# Link the executable eigen_test
+
+build eigen_test: CXX_EXECUTABLE_LINKER__eigen_test_debug CMakeFiles/eigen_test.dir/eigen_test.cpp.o | /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0 /usr/lib/x86_64-linux-gnu/libpython3.10.so
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0  -lpython3.10
+  OBJECT_DIR = CMakeFiles/eigen_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = eigen_test
+  TARGET_PDB = eigen_test.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target boing_test
+
+
+#############################################
+# Order-only phony target for boing_test
+
+build cmake_object_order_depends_target_boing_test: phony || cmake_object_order_depends_target_glfw
+
+build CMakeFiles/boing_test.dir/boing_test.cpp.o: CXX_COMPILER__boing_test_debug /home/tongming/cpp_learning/boing_test.cpp || cmake_object_order_depends_target_boing_test
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK
+  DEP_FILE = CMakeFiles/boing_test.dir/boing_test.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include/GLFW -I/home/tongming/cpp_learning/glfw/include
+  OBJECT_DIR = CMakeFiles/boing_test.dir
+  OBJECT_FILE_DIR = CMakeFiles/boing_test.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target boing_test
+
+
+#############################################
+# Link the executable boing_test
+
+build boing_test: CXX_EXECUTABLE_LINKER__boing_test_debug CMakeFiles/boing_test.dir/boing_test.cpp.o | /usr/lib/x86_64-linux-gnu/libpython3.10.so glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0 /usr/lib/x86_64-linux-gnu/libpython3.10.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so || glfw/src/libglfw3.a
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = -Wl,-rpath,/home/tongming/cpp_learning/glfw/src  -lpython3.10  glfw/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0  -lpython3.10  -Wl,-Bstatic  -lrt  -Wl,-Bdynamic  -lm  -ldl
+  LINK_PATH = -L/home/tongming/cpp_learning/glfw/src
+  OBJECT_DIR = CMakeFiles/boing_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = boing_test
+  TARGET_PDB = boing_test.dbg
+
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tongming/c_test/cmake-build-debug && /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/bin/ccmake -S/home/tongming/c_test -B/home/tongming/c_test/cmake-build-debug
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug && /snap/clion/204/bin/cmake/linux/bin/ccmake -S/home/tongming/cpp_learning -B/home/tongming/cpp_learning/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -92,80 +233,58 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tongming/c_test/cmake-build-debug && /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/tongming/c_test -B/home/tongming/c_test/cmake-build-debug
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug && /snap/clion/204/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/tongming/cpp_learning -B/home/tongming/cpp_learning/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /home/tongming/c_test/CMakeLists.txt
-# =============================================================================
 
-# =============================================================================
-# Object build statements for EXECUTABLE target reader
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
 
 
 #############################################
-# Order-only phony target for reader
+# Utility command for install
 
-build cmake_object_order_depends_target_reader: phony || read_exmaple/CMakeFiles/reader.dir
-
-build read_exmaple/CMakeFiles/reader.dir/reader.cpp.o: CXX_COMPILER__reader_debug /home/tongming/c_test/read_exmaple/reader.cpp || cmake_object_order_depends_target_reader
-  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK
-  DEP_FILE = read_exmaple/CMakeFiles/reader.dir/reader.cpp.o.d
-  FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/tongming/c_test/include -I/usr/include/python3.10
-  OBJECT_DIR = read_exmaple/CMakeFiles/reader.dir
-  OBJECT_FILE_DIR = read_exmaple/CMakeFiles/reader.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target reader
-
-
-#############################################
-# Link the executable read_exmaple/reader
-
-build read_exmaple/reader: CXX_EXECUTABLE_LINKER__reader_debug read_exmaple/CMakeFiles/reader.dir/reader.cpp.o | /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0 /usr/lib/x86_64-linux-gnu/libpython3.10.so
-  FLAGS = -g
-  LINK_FLAGS = -rdynamic
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0  -lpython3.10
-  OBJECT_DIR = read_exmaple/CMakeFiles/reader.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = read_exmaple/reader
-  TARGET_PDB = reader.dbg
-
-
-#############################################
-# Utility command for edit_cache
-
-build read_exmaple/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tongming/c_test/cmake-build-debug/read_exmaple && /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/bin/ccmake -S/home/tongming/c_test -B/home/tongming/c_test/cmake-build-debug
-  DESC = Running CMake cache editor...
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug && /snap/clion/204/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
   pool = console
   restat = 1
 
-build read_exmaple/edit_cache: phony read_exmaple/CMakeFiles/edit_cache.util
+build install: phony CMakeFiles/install.util
 
 
 #############################################
-# Utility command for rebuild_cache
+# Utility command for install/local
 
-build read_exmaple/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tongming/c_test/cmake-build-debug/read_exmaple && /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/tongming/c_test -B/home/tongming/c_test/cmake-build-debug
-  DESC = Running CMake to regenerate build system...
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build read_exmaple/rebuild_cache: phony read_exmaple/CMakeFiles/rebuild_cache.util
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /home/tongming/c_test/CMakeLists.txt
+# /home/tongming/cpp_learning/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -177,11 +296,11 @@ build read_exmaple/rebuild_cache: phony read_exmaple/CMakeFiles/rebuild_cache.ut
 
 build cmake_object_order_depends_target_func_lib: phony || src/CMakeFiles/func_lib.dir
 
-build src/CMakeFiles/func_lib.dir/func.cpp.o: CXX_COMPILER__func_lib_debug /home/tongming/c_test/src/func.cpp || cmake_object_order_depends_target_func_lib
+build src/CMakeFiles/func_lib.dir/func.cpp.o: CXX_COMPILER__func_lib_debug /home/tongming/cpp_learning/src/func.cpp || cmake_object_order_depends_target_func_lib
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK
   DEP_FILE = src/CMakeFiles/func_lib.dir/func.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/tongming/c_test/include -I/usr/include/python3.10
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10
   OBJECT_DIR = src/CMakeFiles/func_lib.dir
   OBJECT_FILE_DIR = src/CMakeFiles/func_lib.dir
 
@@ -210,11 +329,11 @@ build src/libfunc_lib.a: CXX_STATIC_LIBRARY_LINKER__func_lib_debug src/CMakeFile
 
 build cmake_object_order_depends_target_boost_c: phony || src/CMakeFiles/boost_c.dir
 
-build src/CMakeFiles/boost_c.dir/boost_c.cpp.o: CXX_COMPILER__boost_c_debug /home/tongming/c_test/src/boost_c.cpp || cmake_object_order_depends_target_boost_c
+build src/CMakeFiles/boost_c.dir/boost_c.cpp.o: CXX_COMPILER__boost_c_debug /home/tongming/cpp_learning/src/boost_c.cpp || cmake_object_order_depends_target_boost_c
   DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK
   DEP_FILE = src/CMakeFiles/boost_c.dir/boost_c.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/home/tongming/c_test/include -I/usr/include/python3.10
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10
   OBJECT_DIR = src/CMakeFiles/boost_c.dir
   OBJECT_FILE_DIR = src/CMakeFiles/boost_c.dir
 
@@ -239,7 +358,7 @@ build src/libboost_c.a: CXX_STATIC_LIBRARY_LINKER__boost_c_debug src/CMakeFiles/
 # Utility command for edit_cache
 
 build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tongming/c_test/cmake-build-debug/src && /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/bin/ccmake -S/home/tongming/c_test -B/home/tongming/c_test/cmake-build-debug
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/src && /snap/clion/204/bin/cmake/linux/bin/ccmake -S/home/tongming/cpp_learning -B/home/tongming/cpp_learning/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -251,12 +370,432 @@ build src/edit_cache: phony src/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/tongming/c_test/cmake-build-debug/src && /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/tongming/c_test -B/home/tongming/c_test/cmake-build-debug
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/src && /snap/clion/204/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/tongming/cpp_learning -B/home/tongming/cpp_learning/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
 build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/CMakeFiles/install.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/src && /snap/clion/204/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/install: phony src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/CMakeFiles/install/local.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/src && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/install/local: phony src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/src && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/install/strip: phony src/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/tongming/cpp_learning/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for uninstall
+
+build glfw/uninstall: phony glfw/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw && /snap/clion/204/bin/cmake/linux/bin/ccmake -S/home/tongming/cpp_learning -B/home/tongming/cpp_learning/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build glfw/edit_cache: phony glfw/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw && /snap/clion/204/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/tongming/cpp_learning -B/home/tongming/cpp_learning/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build glfw/rebuild_cache: phony glfw/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build glfw/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build glfw/CMakeFiles/install.util: CUSTOM_COMMAND glfw/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw && /snap/clion/204/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build glfw/install: phony glfw/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build glfw/CMakeFiles/install/local.util: CUSTOM_COMMAND glfw/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build glfw/install/local: phony glfw/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build glfw/CMakeFiles/install/strip.util: CUSTOM_COMMAND glfw/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build glfw/install/strip: phony glfw/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for glfw/CMakeFiles/uninstall
+
+build glfw/CMakeFiles/uninstall | ${cmake_ninja_workdir}glfw/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw && /snap/clion/204/bin/cmake/linux/bin/cmake -P /home/tongming/cpp_learning/cmake-build-debug/glfw/cmake_uninstall.cmake
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/tongming/cpp_learning/glfw/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/context.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/init.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/input.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/platform.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/platform.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/platform.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/window.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/null_init.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/null_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/null_init.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/null_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/null_window.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/null_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/null_window.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/null_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99 -Wdeclaration-after-statement
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/posix_module.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/posix_module.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/posix_module.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/posix_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/posix_time.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/x11_init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/x11_init.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/x11_monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/x11_window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/x11_window.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/xkb_unicode.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/glx_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/glx_context.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/linux_joystick.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+build glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o: C_COMPILER__glfw_debug /home/tongming/cpp_learning/glfw/src/posix_poll.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_PYTHON_DYN_LINK -D_DEFAULT_SOURCE -D_GLFW_X11
+  DEP_FILE = glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o.d
+  FLAGS = -g -fPIC -Wall -std=c99
+  INCLUDES = -I/home/tongming/cpp_learning/include -I/usr/include/python3.10 -I/home/tongming/cpp_learning/glfw/include -I/home/tongming/cpp_learning/glfw/src -I/home/tongming/cpp_learning/cmake-build-debug/glfw/src
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = glfw/src/CMakeFiles/glfw.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library glfw/src/libglfw3.a
+
+build glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_debug glfw/src/CMakeFiles/glfw.dir/context.c.o glfw/src/CMakeFiles/glfw.dir/init.c.o glfw/src/CMakeFiles/glfw.dir/input.c.o glfw/src/CMakeFiles/glfw.dir/monitor.c.o glfw/src/CMakeFiles/glfw.dir/platform.c.o glfw/src/CMakeFiles/glfw.dir/vulkan.c.o glfw/src/CMakeFiles/glfw.dir/window.c.o glfw/src/CMakeFiles/glfw.dir/egl_context.c.o glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o glfw/src/CMakeFiles/glfw.dir/null_init.c.o glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o glfw/src/CMakeFiles/glfw.dir/null_window.c.o glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o glfw/src/CMakeFiles/glfw.dir/posix_module.c.o glfw/src/CMakeFiles/glfw.dir/posix_time.c.o glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o glfw/src/CMakeFiles/glfw.dir/x11_init.c.o glfw/src/CMakeFiles/glfw.dir/x11_monitor.c.o glfw/src/CMakeFiles/glfw.dir/x11_window.c.o glfw/src/CMakeFiles/glfw.dir/xkb_unicode.c.o glfw/src/CMakeFiles/glfw.dir/glx_context.c.o glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o glfw/src/CMakeFiles/glfw.dir/posix_poll.c.o || /usr/lib/x86_64-linux-gnu/libboost_python310.so.1.74.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = glfw/src/CMakeFiles/glfw.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = glfw/src/libglfw3.a
+  TARGET_PDB = glfw3.a.dbg
+
+
+#############################################
+# Utility command for update_mappings
+
+build glfw/src/update_mappings: phony glfw/src/CMakeFiles/update_mappings
+
+
+#############################################
+# Utility command for edit_cache
+
+build glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw/src && /snap/clion/204/bin/cmake/linux/bin/ccmake -S/home/tongming/cpp_learning -B/home/tongming/cpp_learning/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build glfw/src/edit_cache: phony glfw/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw/src && /snap/clion/204/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/tongming/cpp_learning -B/home/tongming/cpp_learning/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build glfw/src/rebuild_cache: phony glfw/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build glfw/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build glfw/src/CMakeFiles/install.util: CUSTOM_COMMAND glfw/src/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw/src && /snap/clion/204/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build glfw/src/install: phony glfw/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build glfw/src/CMakeFiles/install/local.util: CUSTOM_COMMAND glfw/src/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw/src && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build glfw/src/install/local: phony glfw/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build glfw/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND glfw/src/all
+  COMMAND = cd /home/tongming/cpp_learning/cmake-build-debug/glfw/src && /snap/clion/204/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build glfw/src/install/strip: phony glfw/src/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for glfw/src/CMakeFiles/update_mappings
+
+build glfw/src/CMakeFiles/update_mappings | ${cmake_ninja_workdir}glfw/src/CMakeFiles/update_mappings: CUSTOM_COMMAND
+  COMMAND = cd /home/tongming/cpp_learning/glfw/src && /snap/clion/204/bin/cmake/linux/bin/cmake -P /home/tongming/cpp_learning/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+  DESC = Updating gamepad mappings from upstream repository
 
 # =============================================================================
 # Target aliases.
@@ -265,11 +804,17 @@ build boost_c: phony src/libboost_c.a
 
 build func_lib: phony src/libfunc_lib.a
 
+build glfw: phony glfw/src/libglfw3.a
+
 build libboost_c.a: phony src/libboost_c.a
 
 build libfunc_lib.a: phony src/libfunc_lib.a
 
-build reader: phony read_exmaple/reader
+build libglfw3.a: phony glfw/src/libglfw3.a
+
+build uninstall: phony glfw/uninstall
+
+build update_mappings: phony glfw/src/update_mappings
 
 # =============================================================================
 # Folder targets.
@@ -277,21 +822,28 @@ build reader: phony read_exmaple/reader
 # =============================================================================
 
 #############################################
-# Folder: /home/tongming/c_test/cmake-build-debug
+# Folder: /home/tongming/cpp_learning/cmake-build-debug
 
-build all: phony test read_exmaple/all src/all
-
-# =============================================================================
-
-#############################################
-# Folder: /home/tongming/c_test/cmake-build-debug/read_exmaple
-
-build read_exmaple/all: phony read_exmaple/reader
+build all: phony test reader thread eigen_test boing_test src/all glfw/all
 
 # =============================================================================
 
 #############################################
-# Folder: /home/tongming/c_test/cmake-build-debug/src
+# Folder: /home/tongming/cpp_learning/cmake-build-debug/glfw
+
+build glfw/all: phony glfw/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/tongming/cpp_learning/cmake-build-debug/glfw/src
+
+build glfw/src/all: phony glfw/src/libglfw3.a
+
+# =============================================================================
+
+#############################################
+# Folder: /home/tongming/cpp_learning/cmake-build-debug/src
 
 build src/all: phony src/libfunc_lib.a src/libboost_c.a
 
@@ -307,14 +859,14 @@ build src/all: phony src/libfunc_lib.a src/libboost_c.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../read_exmaple/CMakeLists.txt ../src/CMakeLists.txt /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeFindFrameworks.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindBoost.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindPythonInterp.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindPythonLibs.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/boost_python-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/boost_python-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/libboost_python-variant-shared-py3.10.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/libboost_python-variant-static-py3.10.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../glfw/CMake/cmake_uninstall.cmake.in ../glfw/CMake/glfw3.pc.in ../glfw/CMake/glfw3Config.cmake.in ../glfw/CMakeLists.txt ../glfw/src/CMakeLists.txt ../src/CMakeLists.txt /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDependentOption.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeFindFrameworks.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckIncludeFile.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckLibraryExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindBoost.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindDoxygen.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFontconfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFreetype.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPkgConfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPythonInterp.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPythonLibs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindThreads.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindX11.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/GNUInstallDirs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/boost_python-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/boost_python-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/libboost_python-variant-shared-py3.10.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/libboost_python-variant-static-py3.10.cmake /usr/share/eigen3/cmake/Eigen3Config.cmake /usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake /usr/share/eigen3/cmake/Eigen3Targets.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../read_exmaple/CMakeLists.txt ../src/CMakeLists.txt /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeFindFrameworks.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindBoost.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindPythonInterp.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/FindPythonLibs.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /home/tongming/.cache/JetBrains/RemoteDev/dist/71861dbc5a9e2_CLion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/boost_python-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/boost_python-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/libboost_python-variant-shared-py3.10.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/libboost_python-variant-static-py3.10.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../glfw/CMake/cmake_uninstall.cmake.in ../glfw/CMake/glfw3.pc.in ../glfw/CMake/glfw3Config.cmake.in ../glfw/CMakeLists.txt ../glfw/src/CMakeLists.txt ../src/CMakeLists.txt /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDependentOption.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeFindFrameworks.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckFunctionExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckIncludeFile.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/CheckLibraryExists.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindBoost.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindDoxygen.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFontconfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindFreetype.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPkgConfig.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPythonInterp.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindPythonLibs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindThreads.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/FindX11.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/GNUInstallDirs.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/SelectLibraryConfigurations.cmake /snap/clion/204/bin/cmake/linux/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.74.0/boost_headers-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/boost_python-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/boost_python-config.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/libboost_python-variant-shared-py3.10.cmake /usr/lib/x86_64-linux-gnu/cmake/boost_python-1.74.0/libboost_python-variant-static-py3.10.cmake /usr/share/eigen3/cmake/Eigen3Config.cmake /usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake /usr/share/eigen3/cmake/Eigen3Targets.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################

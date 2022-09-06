@@ -1,4 +1,4 @@
-# Install script for directory: /home/tongming/c_test
+# Install script for directory: /home/tongming/cpp_learning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,8 +44,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/tongming/c_test/cmake-build-debug/read_exmaple/cmake_install.cmake")
-  include("/home/tongming/c_test/cmake-build-debug/src/cmake_install.cmake")
+  include("/home/tongming/cpp_learning/cmake-build-debug/src/cmake_install.cmake")
+  include("/home/tongming/cpp_learning/cmake-build-debug/glfw/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tongming/c_test/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tongming/cpp_learning/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,4 +1,4 @@
-# Install script for directory: /home/tongming/c_test/src
+# Install script for directory: /home/tongming/cpp_learning/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
